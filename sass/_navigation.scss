@@ -32,18 +32,72 @@ ul.menu {
 
 footer {
 	background: $grey;
+	padding: 50px 0;
 
 	ul.menu {
 		background: none;
+		margin-bottom: 10px;
+
+		li {
+			margin-right: 10px;
+			position: relative;
+		}
 
 		a:hover, a:focus {
 			border-bottom: none;
 		}
 	}
 
+	.social_link {
+		border: 2px solid white;
+	}
+
+	.social_fb {
+		background: $yellow;
+		padding: 5px 8px 5px 10px;
+		text-align: center;
+		display: block;
+		border-radius: 5px;
+		border: 2px solid white;
+	}
+
+	.social_i{
+		background: $blue;
+		padding: 5px 5px 5px 10px;
+		text-align: center;
+		border-radius: 5px;
+
+		&:after {
+			content: "";
+			border-left: 6px solid transparent;
+			border-bottom: 6px solid transparent;
+			border-right: 1px solid transparent;
+			border-top: 6px solid $blue;
+			position: absolute;
+			bottom: -35%;
+			left: 5px;
+		}
+	}
+
 	p {
 		color: white;
 		text-align: center;
+		padding: 0;
+		margin: 0;
+		font-weight: $light;
+		font-size: 0.9rem;
+		letter-spacing: 0.5px;
+
+		a {
+			color: white;
+			border-bottom: 1px solid white;
+
+			&:hover, &:focus {
+				color: $pink;
+				border-bottom: 1px solid $pink;
+			}
+
+		}
 	}
 }
 
