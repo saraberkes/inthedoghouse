@@ -1,14 +1,53 @@
 ul.menu {
 	margin: 0;
 	padding: 0;
+	list-style: none;
+	background: $yellow;
+	text-align: center;
+	padding: 20px 0;
+
 	li {
 		display: inline;
-		margin-right: 10px;
+		margin-right: 50px;
+		text-align: center;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
 		a {
-			color: #333;
-			padding: 10px;
-			background: #333;
 			color: white;
+			font-weight: $bold;
+			text-transform: uppercase;
+			font-size: 0.9rem;
+			letter-spacing: 4px;
+			padding-bottom: 3px;
+
+			&:hover, &:focus {
+				border-bottom: 2px solid white;
+			}
 		}
 	}
 }
+
+footer {
+	background: $grey;
+
+	ul.menu {
+		background: none;
+
+		a:hover, a:focus {
+			border-bottom: none;
+		}
+	}
+
+	p {
+		color: white;
+		text-align: center;
+	}
+}
+
+
+
+
+

@@ -19,7 +19,13 @@ function theme_setup() {
 	add_theme_support( 'automatic-feed-links' );
 
 	// add option to upload logo in theme customizer
-	add_theme_support( 'custom-logo' );
+	add_theme_support( 'custom-logo', array(
+		'height'      => 290,
+		'width'       => 440,
+		'flex-height' => true,
+		'flex-width'  => true,
+		'header-text' => array( 'site-title', 'site-description' ),
+	) );
 
 
 	/* This theme uses wp_nav_menu() in one location.
@@ -28,6 +34,11 @@ function theme_setup() {
 	register_nav_menus( array(
 		'primary' => 'Primary Navigation'
 	) );
+
+	register_nav_menus( array(
+		'social' => 'Social Navigation'
+
+	));
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -84,6 +95,11 @@ function hackeryou_scripts() {
     array( 'jquery', 'plugins' ), //dependencies
     null, // version number
     true //load in footer
+  );
+
+  wp_enqueue_script(
+  	'https://use.typekit.net/hen6mub.js',
+  	'try{Typekit.load({ async: true });}catch(e){}'
   );
 }
 
@@ -280,4 +296,11 @@ function get_post_parent($post) {
 	else {
 		return $post->ID;
 	}
+}
+
+/* this adds the options page to the advanced custom fields plugin */
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
 }

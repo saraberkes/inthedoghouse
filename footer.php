@@ -1,6 +1,11 @@
 <footer>
   <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+  	<?php wp_nav_menu( array(
+  	  'container' => false,
+  	  'theme_location' => 'social'
+  	)); ?>
+    <p>&copy; <?php echo date('Y'); ?> In The Doghouse </p>
+    <p>Design & Development by <a href="http://saraberkescreative.com">SBC</a></p>
   </div>
 </footer>
 
