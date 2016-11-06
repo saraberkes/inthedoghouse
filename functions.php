@@ -62,6 +62,8 @@ function hackeryou_styles(){
 	wp_enqueue_style('style', get_stylesheet_uri() );
 
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+
+	wp_enqueue_style('flickity', 'https://unpkg.com/flickity@2.0/dist/flickity.css');
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
@@ -97,10 +99,13 @@ function hackeryou_scripts() {
     true //load in footer
   );
 
-  wp_enqueue_script(
-  	'https://use.typekit.net/hen6mub.js',
-  	'try{Typekit.load({ async: true });}catch(e){}'
-  );
+ wp_enqueue_script(
+ 	'flickity', //handle
+ 	"https" . "://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js",
+ 	false, //dependencies
+ 	null, //version number
+ 	true //load in footer
+ 	);
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_scripts');

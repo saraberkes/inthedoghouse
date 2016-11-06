@@ -12,10 +12,34 @@ a {
 p {
 	font-family: $font;
 	font-weight: $light;
-	color: $grey;
-	line-height: 1.5rem;
-	font-size: 1rem;
+	line-height: 1.9rem;
+	font-size: 1.25rem;
 	text-align: justify;
+	letter-spacing: 0.5px;
+
+	a {
+		color: inherit;
+		border-bottom: 2px solid white;
+
+		&:hover, &:focus {
+			color: $grey;
+			border-bottom: 2px solid $grey;
+		}
+	}
+}
+
+main {
+	ul {
+	margin: 0;
+		
+		li {
+		font-family: $font;
+		font-weight: $light;
+		font-size: 1.25rem;
+		line-height: 1.25rem;
+		letter-spacing: 0.5px;
+	}
+}
 }
 
 /*blockquotes*/
@@ -34,17 +58,30 @@ blockquote {
 h1, h2 {
 	font-family: $font;
 	font-weight: $bold;
-	font-size: 3rem;
-	color: $grey;
-	line-height: 3.5rem;
+	font-size: 3.4rem;
+	line-height: 4rem;
 	text-align: center;
+	margin: 0;
+	padding: 0;
+	color: white;
 }
 
 h3 {
 	font-family: $font;
 	font-weight: $bold;
-	font-size: 1.1rem;
-	line-height: 1.5rem;
+	font-size: 1.5rem;
+	line-height: 1.8rem;
+	color: white;
+	letter-spacing: 0.5px;
+}
+
+h4 {
+	font-family: $font;
+	font-weight: $light;
+	font-size: 1.5rem;
+	color: white;
+	padding: 0;
+	margin-bottom: 10px;
 }
 
 /*tables*/
@@ -119,3 +156,4 @@ img {
 	float: left;
 	clear: both;
 }
+

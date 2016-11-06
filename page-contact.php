@@ -1,8 +1,8 @@
 <?php get_header();  ?>
 <main>
 
-	<section class="introText">
-		<div class="content">
+	<section class="introTextWhite">
+		<div class="contact">
 			<h1><?php the_field('contact_headline')?></h1>
 			<p><?php the_field('contact_text') ?></p>
 		</div>
@@ -13,13 +13,13 @@
 		
 	<section class="bookServices" style="background:<?php echo $bookBackground;?>">
 		
-		<div class="content">
+		<div class="introText contact">
 			<h2><?php the_field('book_headline') ?></h2>
 			<p><?php the_field('book_text') ?></p>
 
 			<?php while(have_rows('info_form_buttons')) : the_row(); ?>
 
-				<a href="<?php the_sub_field('button_link') ?> "><?php the_sub_field('button_text') ?></a>
+				<a href="<?php the_sub_field('button_link') ?> " class="button"><?php the_sub_field('button_text') ?></a>
 
 			<?php endwhile; ?>
 		
@@ -32,10 +32,10 @@
 	
 	<section class="contactForm" style="background:<?php echo $contactBackground; ?>">
 		
-		<div class="content">
+		<div class="contact">
 			<h2><?php the_field('contact_form_headline') ?></h2>
 			<p><?php the_field('contact_form_text') ?></p>
-			<?php the_field('form') ?>
+			<div class="form"><?php the_field('form') ?></div>
 		</div>
 	</section>
 

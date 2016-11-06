@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?php  wp_title('|', true, 'right'); ?></title>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<script src="https://use.typekit.net/hen6mub.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<!-- stylesheets should be enqueued in functions.php -->
 	<?php wp_head(); ?>
 </head>

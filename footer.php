@@ -5,7 +5,7 @@
   	  'theme_location' => 'social'
   	)); ?>
     <p>&copy; <?php echo date('Y'); ?> In The Doghouse </p>
-    <p>Design & Development by <a href="http://saraberkescreative.com">SBC</a></p>
+    <p>Design & Development by <a href="http://saraberkescreative.com" target="_blank">SBC</a></p>
   </div>
 </footer>
 

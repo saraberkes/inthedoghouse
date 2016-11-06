@@ -24,6 +24,10 @@ img {
 	max-width: 100%;
 }
 
+html {
+	font-size: 16px;
+}
+
 body {
 
 }
@@ -42,18 +46,6 @@ body {
 	width: 100%;
 }
 
-.hero {
-	height: 100vh;
-	width: 90%;
-	margin: 0 auto;
-	text-align: center;
-
-	img {
-		width: 75%;
-		text-align: center;
-	}
-}
-
 header {
 	margin-top: 25px;
 
@@ -68,5 +60,788 @@ header {
 	float: left;
 	max-width: 60%;
 	margin-right: 20px;
+}
+
+.button {
+			width: 200px;
+			margin: 50px auto 0;
+			text-align: center;
+			background: $orange;
+			border: none;
+			padding: 25px 35px;
+			border-radius: 10px;
+			color: white;
+			text-transform: uppercase;
+			font-family: $font;
+			font-weight: $bold;
+			letter-spacing: 2px;
+			transition: 0.2s;
+			border-bottom: none;
+
+			&:hover, &:focus {
+				background: $grey;
+				color: white;
+				opacity: 1;
+				border-bottom: none;
+			}
+}
+
+
+//intro Text custom field styling starts here
+
+.introText {
+	padding: 100px 0;
+	color: white;
+}
+
+.introTextWhite {
+	padding: 100px 0;
+	color: $grey;
+
+	h1, h2, h3, p {
+		color: $grey;
+	}
+}
+
+//services custom field styling starts here
+
+.services {
+	padding: 125px 0;
+
+	h2 {
+		color: $grey;
+	}
+
+	.button {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+	.indService {
+		margin-top: 75px;
+		margin-bottom: 50px;
+		display: flex;
+		justify-content: space-between;
+		text-align: center;
+
+		.servicesIndividual {
+			flex: 0 1 275px;
+
+			p {
+				text-align: center;
+				color: $grey;
+			}
+		}
+
+		.servicesIcon {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 275px;
+			height: 260px;
+			border-radius: 20px;
+			position: relative;
+
+			&:before {
+				content: '';
+				border-left: 38px solid transparent;
+				border-bottom: 28px solid transparent;
+				border-right: 2px solid transparent;
+				border-top: 28px solid;
+				border-top-color: inherit;
+				position: absolute;
+				bottom: -25%;
+				left: 15%;
+			}
+
+			&:after {
+				content: '';
+				border-left: 25px solid transparent;
+				border-bottom: 21px solid transparent;
+				border-right: 1px solid transparent;
+				border-top: 21px solid white;
+				position: absolute;
+				bottom: -15%;
+				left: 17%;
+			}
+		
+
+
+			img {
+				width: 60%;
+			}
+		}
+
+		h3 {
+			margin-top: 50px;
+		}
+}
+
+// testimonial styling starts here
+.testimonial {
+	padding: 100px 0;
+
+	p {
+		color: white;
+		margin-top: 50px;
+		font-style: italic;
+
+		&:before {
+			content: '\201C';
+		}
+
+		&:after {
+			content: '\201D';
+		}
+	}
+
+	h2 {
+		margin-bottom: 50px;
+	}
+
+	.happyPetBorder {
+		margin: 0 auto;
+		border: 10px solid white;
+		width: 345px;
+		height: 300px;
+		border-radius: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+
+	}
+
+	.happyPetBG {
+
+		&:before {
+			content: '';
+			border-left: 38px solid transparent;
+			border-bottom: 28px solid transparent;
+			border-right: 2px solid transparent;
+			border-top: 28px solid white;
+			position: absolute;
+			bottom: -23%;
+			left: 15%;
+		}
+
+		&:after {
+			content: '';
+			border-left: 25px solid transparent;
+			border-bottom: 21px solid transparent;
+			border-right: 1px solid transparent;
+			border-top: 21px solid;
+			border-top-color: inherit;
+			position: absolute;
+			bottom: -15%;
+			left: 17%;
+		}
+	}
+
+	.happyPetImage {
+		margin: 0 auto;
+		width: 320px;
+		height: 275px;
+		overflow: hidden;
+		border-radius: 30px;
+		border: 10px solid;
+		border-color: inherit;
+
+		img {
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.happyPet {
+		&:before {
+			content: 'Happy Pet: ';
+		}
+	}
+}
+
+//testimonial flickity styling starts here
+
+.carousel-cell {
+	width: 100%;
+		
+		.text {
+			width: 900px;
+			margin: 0 auto;
+			margin-top: 50px;
+		}
+}
+
+//flickity prev / next button styling starts here
+
+.carousel {
+	
+	.flickity-prev-next-button {
+	  width: 50px;
+	  height: 50px;
+	  background: transparent;
+	}
+	
+	.flickity-prev-next-button:hover {
+	  background: transparent;
+	}
+	
+	/* arrow color */
+	.flickity-prev-next-button .arrow {
+	  fill: white;
+	}
+	
+	.flickity-prev-next-button.no-svg {
+	  color: white;
+	}
+	
+	/* hide disabled button */
+	.flickity-prev-next-button:disabled {
+	  display: none;
+	}
+
+	.flickity-prev-next-button.previous {
+	  left: 70px;
+	}
+
+	.flickity-prev-next-button.next {
+	  right: 70px;
+	}
+
+}
+
+//newsletter custom field styling starts here
+.newsletter {
+	padding: 150px 0;
+	color: white;
+
+	p {
+		text-align: center;
+	}
+
+	form {
+		text-align: center;
+		margin-top: 50px;
+
+		input[type=text], input[type=email] {
+			border: 2px solid white;
+			background: none;
+			width: 40%;
+			padding: 10px;
+			color: white;
+			font-family: $font;
+			font-style: italic;
+
+			&::-webkit-input-placeholder {
+			   color: white;
+			   font-family: $font;
+			   font-style: italic;
+			}
+
+			&:-moz-placeholder { /* Firefox 18- */
+			   color: white; 
+			   font-family: $font; 
+			   font-style: italic;
+
+			}
+
+			&::-moz-placeholder {  /* Firefox 19+ */
+			   color: white;  
+			   font-family: $font;
+			   font-style: italic;
+			}
+
+			&:-ms-input-placeholder {  
+			   color: white; 
+			   font-family: $font;
+			   font-style: italic; 
+			}
+
+
+			&:focus {
+				outline: none;
+				background: rgba(255, 255, 255, 0.2);
+			}
+		}
+
+		input[type=text] {
+			margin-right: 10px;
+		}
+
+		input[type=submit]{
+			display: block;
+			margin: 50px auto 0;
+			background: $orange;
+			border: none;
+			padding: 25px 35px;
+			border-radius: 10px;
+			color: white;
+			text-transform: uppercase;
+			font-family: $font;
+			font-weight: $bold;
+			letter-spacing: 2px;
+			transition: 0.2s;
+
+			&:hover {
+				background: $grey;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+
+//front page styling starts here
+
+.hero {
+
+	margin: 0;
+	padding: 0;
+
+	img {
+		width: 90%;
+		display: flex;
+		align-items: flex-end;
+	}
+
+
+	h1 {
+		color: $grey;
+		margin: 0;
+		padding: 0;
+	}
+
+	.headline {
+		margin-top: 100px;
+		padding: 30px;
+		border-radius: 30px;
+		position: relative;
+
+		&:before {
+			content: '';
+			border-left: 70px solid transparent;
+			border-bottom: 45px solid transparent;
+			border-right: 1px solid transparent;
+			border-top: 45px solid;
+			border-top-color: inherit;
+			position: absolute;
+			bottom: -53%;
+			left: 15%;
+		}
+
+		&:after {
+			content: '';
+			border-left: 60px solid transparent;
+			border-bottom: 37px solid transparent;
+			border-right: 1px solid transparent;
+			border-top: 40px solid white;
+			position: absolute;
+			bottom: -38%;
+			left: 15%;
+		}
+
+	}
+
+}
+
+.instagram {
+	padding: 100px 0;
+
+	h2 {
+		color: $grey;
+	}
+}
+
+
+//about page styling starts here
+
+.meetTeamHeadline {
+	padding: 100px 0 50px;
+}
+
+.teamMember {
+
+	.first {
+		display: block;
+		padding: 0 0 100px;
+
+		h3 {
+			margin-top: 50px;
+		}
+	}
+
+	.odd {
+		display: flex;
+		align-items: center;
+		padding: 100px 0;
+
+		.teamText {
+			margin-left: 50px;
+		}
+	}
+
+	.even {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		padding: 100px 0;
+
+		.teamText {
+			margin-right: 50px;
+		}
+	}
+
+
+
+	.teamText {
+
+		p {
+			color: white;
+		}
+	
+	}
+
+	.teamPhotoBorder {
+		margin: 0 auto;
+		border: 10px solid white;
+		width: 345px;
+		height: 300px;
+		border-radius: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+	}
+	
+	.teamPhoto {
+		width: 300px;
+		height: 255px;
+		border-radius: 20px;
+		overflow: hidden;
+
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	h3 {
+		text-align: center;
+		
+	}
+}
+
+//contact page starts here
+
+.contact {
+	width: 800px;
+	margin: 0 auto;
+
+	p {
+		text-align: center;
+		margin: 30px 0 0;
+		color: $grey;
+	}
+}
+
+	.bookServices {
+		padding: 50px 0;
+		text-align: center;
+
+		p {
+			text-align: center;
+			color: white;
+			margin-bottom: 60px;
+		}
+	
+	.button {
+		margin-right: 10px;
+	}
+}
+
+	.contactForm {
+		padding: 100px 0;
+
+		p {
+			color: white;
+		}
+
+		input[type=text], input[type=email], textarea {
+			background: none;
+			outline: none;
+			border: 2px solid white;
+			text-align: left;
+			color: white;
+			padding: 10px;
+			font-style: italic;
+			font-weight: $light;
+			width: 100%;
+
+			&:focus {
+				background: rgba(255, 255, 255, 0.2);
+			}
+
+			&::-webkit-input-placeholder {
+			   color: white;
+			   font-family: $font;
+			   font-style: italic;
+			}
+
+			&:-moz-placeholder { /* Firefox 18- */
+			   color: white; 
+			   font-family: $font; 
+			   font-style: italic;
+
+			}
+
+			&::-moz-placeholder {  /* Firefox 19+ */
+			   color: white;  
+			   font-family: $font;
+			   font-style: italic;
+			}
+
+			&:-ms-input-placeholder {  
+			   color: white; 
+			   font-family: $font;
+			   font-style: italic; 
+			}
+		}
+
+		input[type=checkbox] {
+			background: none;
+			outline: none;
+			border: 2px solid white;
+			width: 30px;
+			height: 30px;
+			margin-right: 10px;
+			-webkit-appearance: none;
+			cursor: pointer;
+
+			&:checked {
+				position: relative;
+
+				&:after {
+				content: '✔';
+				color: white;
+				font-size: 1.5rem;
+				position: absolute;
+				top: -20%;
+				left: 50%;
+				transform: translate(-50%, 0);
+				}
+			}
+		}
+
+		span.wpcf7-list-item {
+			display: flex;
+			align-items: center;
+		}
+
+		input[type=submit] {
+			display: block;
+			margin: 50px auto 0;
+			background: $orange;
+			border: none;
+			padding: 15px 40px;
+			border-radius: 10px;
+			color: white;
+			text-transform: uppercase;
+			font-family: $font;
+			font-size: 1rem;
+			font-weight: $bold;
+			letter-spacing: 2px;
+			transition: 0.2s;
+
+			&:hover {
+				background: $grey;
+				opacity: 1;
+			}
+		}
+
+		.form {
+			margin-top: 50px;
+
+			p {
+				text-align: left;
+			}
+		}
+	}
+
+// Services page styling starts here 
+
+.servicesMain{
+	width: 900px;
+	margin: 0 auto;
+	padding-top: 50px;
+	padding-bottom: 0;
+	
+	h1 {
+		color: $grey;
+	}
+	
+	p {
+		text-align: center;
+		margin-top: 50px;
+	}
+}
+
+.petTypeColumn {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-top: 20px;
+
+	.petType {
+		flex: 0 1 435px;
+		text-align: center;
+
+		h3 {
+			color: $grey;
+			padding: 0;
+			margin: 0.2rem;
+		}
+
+		p {
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		.button {
+			width: 350px;
+			padding: 20px 15px;
+			margin-top: 20px;
+		}
+	}
+
+	.pet {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 280px;
+		border-radius: 30px;
+		position: relative;
+
+		&:before {
+			content: '';
+			border-left: 70px solid transparent;
+			border-bottom: 45px solid transparent;
+			border-right: 1px solid transparent;
+			border-top: 45px solid;
+			border-top-color: inherit;
+			position: absolute;
+			bottom: -35%;
+			left: 15%;
+		}
+
+		&:after {
+			content: '';
+			border-left: 60px solid transparent;
+			border-bottom: 37px solid transparent;
+			border-right: 1px solid transparent;
+			border-top: 40px solid white;
+			position: absolute;
+			bottom: -25%;
+			left: 15%;
+		}
+
+		.icon {
+			width: 80px;
+			height: 50px;
+			margin: 0 auto;
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	.petImage {
+		width: 435px;
+		height: 225px;
+
+		img {
+			height: 100%;
+			object-fit: cover;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
+
+.dogServicesSubcategories, .dogServices, .catServicesSubcategories, .catServices {
+	padding: 100px 0;
+	color: white;
+
+	.subcategories {
+		display: flex;
+		justify-content: space-between;
+
+		.subcategory1, .subcategory2 {
+			flex: 0 1 47%;
+		}
+	}
+
+	.serviceButton {
+		text-align: center;
+		margin-top: 75px;
+	}
+
+	h3 {
+		text-align: center;
+		margin: 0;
+		padding-bottom: 5px;
+
+		&.uppercase {
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+	}
+}
+
+.iconBorder {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+	.icons {
+		border: 10px solid white;
+		width: 425px;
+		height: 250px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 0 auto 50px;
+		border-radius: 30px;
+
+		img {
+			width: 150px;
+			margin-right: 40px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+.dogServicesSubcategories, .dogServices {
+	h2 {
+		margin-bottom: 75px;
+
+		&:before {
+			content: 'Dog Services: ';
+		}
+	}
+}
+
+.catServicesSubcategories, .catServices {
+	h2 {
+		margin-bottom: 75px;
+
+		&:before {
+			content: 'Cat Services: ';
+		}
+	}
 }
 
