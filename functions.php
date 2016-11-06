@@ -52,6 +52,7 @@ function theme_setup() {
 }
 endif;
 
+
 add_action( 'after_setup_theme', 'theme_setup' );
 
 /* Add all our CSS files here.
@@ -102,6 +103,14 @@ function hackeryou_scripts() {
  wp_enqueue_script(
  	'flickity', //handle
  	"https" . "://unpkg.com/flickity@2.0/dist/flickity.pkgd.min.js",
+ 	false, //dependencies
+ 	null, //version number
+ 	true //load in footer
+ 	);
+
+ wp_enqueue_script(
+ 	'smoothScroll',
+ 	"https" . "://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.0.0/jquery.smooth-scroll.min.js",
  	false, //dependencies
  	null, //version number
  	true //load in footer
