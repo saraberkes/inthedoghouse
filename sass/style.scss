@@ -1,10 +1,10 @@
 /*!
-* Theme Name: HackerYou Starter Theme
-* Theme URI: http://hackeryou.com;
-* Description: Starter theme for building any website. Created by HackerYou. * Rename this to your own theme page.
+* Theme Name: In The Doghouse
+* Theme URI: http://ottawapetsitter.com
+* Description: Custom theme for In The Doghouse, built on the HackerYou Starter Theme
 * Version: 1.0
-* Author: HackerYou
-* Author URI: http://hackeryou.com
+* Author: Sara Berkes
+* Author URI: http://saraberkes.com
 */
 
 @import 'normalize';
@@ -14,6 +14,7 @@
 @import 'sidebar';
 @import 'comments';
 @import 'footer';
+@import 'formstyles';
 /*
 ====================================
 Default Styling
@@ -316,7 +317,7 @@ header {
 
 	form {
 		text-align: center;
-		margin-top: 50px;
+		margin: 50px 0;
 
 		input[type=text], input[type=email] {
 			border: 2px solid white;
@@ -525,6 +526,14 @@ header {
 		text-align: center;
 		
 	}
+}
+
+.instagram {
+	margin: 75px 0;
+}
+
+.instaHeadline {
+	margin-bottom: 75px;
 }
 
 //contact page starts here
@@ -793,12 +802,6 @@ header {
 	}
 }
 
-.iconBorder {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 	.icons {
 		border: 10px solid white;
 		width: 425px;
@@ -817,6 +820,38 @@ header {
 				margin-right: 0;
 			}
 		}
+	}
+
+	.iconBorder {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 375px;
+		height: 200px;
+		position: relative;
+
+			&:before {
+				content: '';
+				border-left: 38px solid transparent;
+				border-bottom: 28px solid transparent;
+				border-right: 2px solid transparent;
+				border-top: 28px solid white;
+				position: absolute;
+				bottom: -50%;
+				left: 10%;
+			}
+
+			&:after {
+				content: '';
+				border-left: 25px solid transparent;
+				border-bottom: 21px solid transparent;
+				border-right: 1px solid transparent;
+				border-top: 21px solid;
+				border-top-color: inherit;
+				position: absolute;
+				bottom: -36%;
+				left: 11.5%;
+			}
 	}
 
 .dogServicesSubcategories, .dogServices {
@@ -840,29 +875,31 @@ header {
 }
 
 //blog styling starts here
+
+.blogContent {
+	margin: 0 auto;
+	width: 900px;
+	display: flex;
+	justify-content: space-between;
+}
+
 .blogPosts {
-	float: left;
-	max-width: 60%;
-	margin-right: 20px;
+	width: 70%;
+	margin-bottom: 50px;
+
+	h1 {
+		color: $grey;
+		margin-top: 50px;
+	}
 
 	p {
 		font-size: 1.1rem;
 		line-height: 1.8rem;
+		color: $grey;
 	}
 
-	article {
-		margin-top: 50px;
-
-		h2 a {
-			color: white;
-			background: $green;
-			display: block;
-			padding: 20px 25px;
-
-			&:hover, &:focus {
-				background: $grey;
-			}
-		}
+	.text-content {
+		margin: 30px 0;
 	}
 
 	img {
@@ -883,3 +920,276 @@ header {
 		height: auto;
 		object-fit: cover;
 	}
+
+.postFooter {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 30px;
+	align-items: center;
+	background: $green;
+
+	h3 {
+	font-size: 1.1rem;
+
+		a {
+			color: white;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-size: 1.1rem;
+			transition: 0.2s;
+
+			&:focus, &:hover {
+				color: $grey;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+article {
+	margin-top: 100px;
+
+	h2 a, h1 {
+		color: white;
+		background: $green;
+		display: block;
+		padding: 40px 25px;
+		line-height: 3.5rem;
+		transition: 0.2s;
+
+		&:hover, &:focus {
+			background: $grey;
+			opacity: 1;
+			color: white;
+		}
+	}
+}
+
+article:first-child {
+	margin-top: 50px;
+}
+
+.alignleft, .alignright {
+	margin: 100px 0;
+
+	a {
+		background: $orange;
+		color: white;
+		font-weight: $bold;
+		text-transform: uppercase;
+		padding: 20px;
+		border-radius: 15px;
+		letter-spacing: 2px;
+		transition: 0.2s;
+		
+			&:hover, &:focus {
+			border: none;
+			color: white;
+			background: $grey;
+			opacity: 1;
+		}
+}
+}
+
+//individual blog post page styling
+.postPage-title{
+	color: $grey;
+	margin: 50px 0;
+}
+
+.attachment-large {
+	width: 100%;
+	height: 500px;
+	object-fit: cover;
+}
+
+.indPost {
+
+	h1 {
+		color: white;
+
+		&:hover, &:focus {
+			background: $green;
+		}
+	}
+
+	.postFooter {
+		padding: 20px;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.entry-utility {
+	font-family: $font;
+	color: white;
+	font-weight: $light;
+
+	a {
+		color: white;
+		border-bottom: 1px solid white;
+		transition: 0.2s;
+
+		&:hover, &:focus {
+			color: $grey;
+			border-bottom: 1px solid $grey;
+			opacity: 1;
+		}
+	}
+}
+
+.entry-content {
+	color: $grey;
+}
+
+.edit-link {
+	float: right;
+	text-transform: uppercase;
+	font-weight: $bold;
+	letter-spacing: 2px;
+
+	a {
+		border: none;
+
+		&:focus, &:hover {
+			border: none;
+		}
+	}
+}
+
+//this is for the search results on the blog
+.results {
+	margin: 50px auto;
+	text-align: center;
+
+	article {
+		margin-top: 50px;
+		margin-bottom: 100px;
+	}
+
+	p {
+		text-align: center;
+	}
+
+	h2 {
+		color: $grey;
+	}
+
+	input[type=search] {
+		font-size: 1.25rem;
+	}
+
+	.searchsubmit {
+		background: $grey;
+		padding: 14px;
+		text-transform: uppercase;
+		font-family: $font;
+		font-weight: $bold;
+		letter-spacing: 2px;
+		font-size: 1.1rem;
+		border: none;
+		outline: none;
+		transition: 0.2s;
+		color: white;
+
+		&:hover, &:focus {
+			background: $orange;
+			opacity: 1;
+			color: white;
+		}
+	}
+
+	h1 {
+		color: $grey;
+		margin: 0;
+	}
+
+	h2 a {
+		color: white;
+		background: $green;
+		display: block;
+		padding: 40px 25px;
+		line-height: 3.5rem;
+		transition: 0.2s;
+
+		&:hover, &:focus {
+			background: $grey;
+			opacity: 1;
+		}
+	}
+	
+	.entry-content{ 
+		
+		p {
+			text-align: justify;
+			margin: 50px 0
+		}
+	}
+
+	.postFooter {
+		margin-bottom: 100px;
+	}
+}
+
+
+//this is for the category page
+.category {
+	article {
+		margin-top: 50px;
+		margin-bottom: 100px;
+	}
+}
+
+
+//this is for the single post page comments (to override earlier CSS)
+
+.comment-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	p {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+	.comment-meta {
+		background: none;
+		text-align: left;
+		padding: 20px 0 10px;
+
+		img {
+			display: none;
+		}
+	}
+
+.comment-author {
+	font-family: $font;
+	font-size: 1.25rem;
+	color: $pink;
+}
+
+.reply {
+	float: right;
+	font-size: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+
+	a {
+		
+		&:hover, &:focus {
+			color: $orange;
+		}
+	}
+
+}
+
+#respond {
+	border: none;
+}
+
+
+.clear {
+	float: none;
+}

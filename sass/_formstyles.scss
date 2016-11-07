@@ -1,0 +1,27 @@
+div.wpcf7-mail-sent-ok {
+	border: none;
+	font-family: $font;
+	font-weight: $light;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	background: $pink;
+}
+
+div.wpcf7-validation-errors {
+	border: none;
+	font-family: $font;
+	font-weight: $light;
+	color: white;
+	text-align: center;
+	padding: 20px;
+	background: $yellow;
+}
+
+span.wpcf7-not-valid-tip {
+	background: $red;
+	color: white;
+	padding: 10px;
+	font-size: 1rem;
+	margin-top: 10px;
+}

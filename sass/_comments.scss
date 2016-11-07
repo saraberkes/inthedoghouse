@@ -2,7 +2,7 @@
 	padding: 0 0 18px;
 }
 
-h3 {
+h3, h3 {
 	&#comments-title, &#reply-title {
 		color: #000000;
 		font-weight: 700;
@@ -75,10 +75,8 @@ h3 {
 }
 
 .reply {
-	font-size: 12px;
-	padding: 0 0 24px;
 	a {
-		color: #888888;
+		color: $grey;
 	}
 }
 
@@ -103,9 +101,9 @@ a.comment-edit-link {
 
 #comments .pingback {
 	p {
-		color: #888888;
-		font-size: 12px;
-		line-height: 18px;
+		color: $grey;
+		font-size: 1.25rem;
+		line-height: 1.8rem;
 		display: block;
 		margin: 0;
 	}
@@ -115,9 +113,7 @@ a.comment-edit-link {
 	}
 }
 
-input[type=submit] {
-	color: #333333;
-}
+
 
 #respond {
 	margin-top: 24px;
@@ -139,6 +135,7 @@ input[type=submit] {
 
 h3#reply-title {
 	margin: 18px 0;
+	color: $grey;
 }
 
 #comments-list #respond {
@@ -152,13 +149,15 @@ h3#reply-title {
 }
 
 #respond {
+
 	.required {
 		color: #ff4b33;
 		font-weight: 700;
 	}
 	label {
-		color: #888888;
-		font-size: 12px;
+		color: $grey;
+		font-size: 0.8rem;
+		font-style: italic;
 	}
 	input {
 		width: 98%;
@@ -166,6 +165,7 @@ h3#reply-title {
 	}
 	textarea {
 		width: 98%;
+		color: $grey;
 	}
 	dt {
 		color: #888888;
@@ -181,10 +181,9 @@ h3#reply-title {
 		}
 	}
 	.form-submit {
-		margin: 0 0 24px;
+		margin: 20px 0;
 		input {
 			width: auto;
-			font-size: 14px;
 		}
 	}
 	dl {
@@ -214,14 +213,45 @@ p.form-allowed-tags, .nocomments {
 
 .comment-meta a {
 	&:active, &:hover {
-		color: #ff4b33;
+		color: $orange;
 	}
 }
 
 .reply a:hover, a.comment-edit-link:hover {
-	color: #ff4b33;
+	color: $orange;
 }
 
 #respond p, #comments-list ul #respond {
 	margin: 0;
+}
+
+.comments-title {
+	color: $grey;
+	margin-top: 50px;
+	font-size: 1.5rem;
+}
+
+input[type=submit] {
+	color: white;
+	background: $orange;
+	border: none;
+	border-radius: 10px;
+	padding: 15px;
+	font-family: $font;
+	font-weight: $bold;
+	font-size: 1rem;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+
+	a {
+		color: white;
+	}
+
+	&:focus, &:hover {
+		background: $grey;
+	}
+}
+
+input[type=text], input[type=email], input[type=url]{
+	color: $grey;
 }
