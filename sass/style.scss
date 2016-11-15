@@ -217,7 +217,7 @@ header {
 			border-right: 2px solid transparent;
 			border-top: 28px solid white;
 			position: absolute;
-			bottom: -23%;
+			bottom: -60px;
 			left: 15%;
 		}
 
@@ -229,7 +229,7 @@ header {
 			border-top: 21px solid;
 			border-top-color: inherit;
 			position: absolute;
-			bottom: -15%;
+			bottom: -35px;
 			left: 17%;
 		}
 	}
@@ -308,7 +308,7 @@ header {
 
 //newsletter custom field styling starts here
 .newsletter {
-	padding: 150px 0;
+	padding: 150px 0 75px;
 	color: white;
 
 	p {
@@ -675,7 +675,8 @@ header {
 // Services page styling starts here 
 
 .servicesMain{
-	width: 900px;
+	max-width: 900px;
+	width: 95%;
 	margin: 0 auto;
 	padding-top: 50px;
 	padding-bottom: 0;
@@ -686,19 +687,31 @@ header {
 	
 	p {
 		text-align: center;
-		margin-top: 50px;
+		margin: 50px 0;
 	}
 }
 
 .petTypeColumn {
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-end;
-	margin-top: 20px;
 
 	.petType {
-		flex: 0 1 435px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		text-align: center;
+	}
+
+	.pet {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		min-height: 280px;
+		border-radius: 30px;
+		position: relative;
+		padding: 20px 40px;
+		margin: 0 5px;
 
 		h3 {
 			color: $grey;
@@ -712,20 +725,11 @@ header {
 		}
 
 		.button {
-			width: 350px;
-			padding: 20px 15px;
+			max-width: 350px;
+			width: 100%;
+			padding: 20px 5px;
 			margin-top: 20px;
 		}
-	}
-
-	.pet {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		height: 280px;
-		border-radius: 30px;
-		position: relative;
 
 		&:before {
 			content: '';
@@ -735,7 +739,7 @@ header {
 			border-top: 45px solid;
 			border-top-color: inherit;
 			position: absolute;
-			bottom: -35%;
+			bottom: -95px;
 			left: 15%;
 		}
 
@@ -746,7 +750,7 @@ header {
 			border-right: 1px solid transparent;
 			border-top: 40px solid white;
 			position: absolute;
-			bottom: -25%;
+			bottom: -65px;
 			left: 15%;
 		}
 
@@ -760,11 +764,11 @@ header {
 	}
 
 	.petImage {
-		width: 435px;
-		height: 225px;
+		max-width: 435px;
 
 		img {
 			height: 100%;
+			width: 100%;
 			object-fit: cover;
 			display: block;
 			margin: 0 auto;
@@ -804,7 +808,7 @@ header {
 
 	.icons {
 		border: 10px solid white;
-		width: 425px;
+		max-width: 425px;
 		height: 250px;
 		display: flex;
 		justify-content: center;
@@ -813,7 +817,7 @@ header {
 		border-radius: 30px;
 
 		img {
-			width: 150px;
+			width: 40%;
 			margin-right: 40px;
 
 			&:last-child {
@@ -878,7 +882,8 @@ header {
 
 .blogContent {
 	margin: 0 auto;
-	width: 900px;
+	max-width: 900px;
+	width: 95%;
 	display: flex;
 	justify-content: space-between;
 }
@@ -886,6 +891,7 @@ header {
 .blogPosts {
 	width: 70%;
 	margin-bottom: 50px;
+	margin-right: 10px;
 
 	h1 {
 		color: $grey;
@@ -1192,3 +1198,24 @@ article:first-child {
 .clear {
 	float: none;
 }
+
+.giphy-embed {
+	width: 450px;
+	height: 270px;
+	margin: 20px 0 50px;
+}
+
+.error {
+	text-align: center;
+
+	h1 {
+		color: $grey;
+		margin: 50px 0 20px;
+	}
+	
+	p {
+		text-align: center;
+	}
+}
+
+@import 'queries';

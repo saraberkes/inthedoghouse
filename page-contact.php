@@ -25,7 +25,7 @@
 		
 		</div>
 
-	</section>
+</section>
 
 	<?php $field = get_field_object('contact_form_background_colour');
 				$contactBackground = $field['value']; ?>

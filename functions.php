@@ -65,6 +65,8 @@ function hackeryou_styles(){
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 
 	wp_enqueue_style('flickity', 'https://unpkg.com/flickity@2.0/dist/flickity.css');
+
+	wp_enqueue_style('poppins', 'https://fonts.googleapis.com/css?family=Poppins:300,700');
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_styles');
@@ -118,7 +120,6 @@ function hackeryou_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_scripts');
-
 
 /* Custom Title Tags */
 

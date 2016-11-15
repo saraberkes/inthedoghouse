@@ -23,11 +23,14 @@
 	?>
 	<img src="<?php echo $image[0]; ?>" alt="">
 </div>
+<div id="mobileMenu"><a href="#">Menu</a></div>
 
+<div class="menuRegular">
 		<?php wp_nav_menu( array(
 			'container' => false,
 			'theme_location' => 'primary'
 		)); ?>
+</div>
 		
 </header><!--/.header-->
 

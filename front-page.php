@@ -27,28 +27,7 @@ $introbg = $field['value']; ?>
 </section>
 
 <section class="services content">
-		<h2><?php the_field('services_headline', 'option') ?></h2>
-		<div class="indService">
-			<?php 
-				while(have_rows('services', 'option')) : the_row();
-			 ?>
-				<div class="servicesIndividual">
-				
-				<?php $serviceIcon = get_sub_field('services_icon'); ?>
-				
-				<?php $servicesborder = get_sub_field('colour'); ?>
-				
-				<div class="servicesIcon" style="border:<?php echo $servicesborder; ?> 10px solid">
-					<img src="<?php echo $serviceIcon['url'] ?> " alt="<?php echo $serviceIcon['alt'] ?> ">
-					</div>
-				
-				<h3 style="color:<?php echo $servicesborder; ?> "><?php the_sub_field('services_title')?></h3>
-				
-				<p><?php the_sub_field('services_description')?></p>
-				</div>
-	<?php endwhile; ?>
-	</div>
-	<a href="<?php the_field('services_button_link', 'option') ?> " class="button"><?php the_field('services_button_text', 'option') ?></a>
+<?php get_template_part('services'); ?>
 </section>
 
 <?php $field = get_field_object('home_rotator_bg_colour');
@@ -58,12 +37,13 @@ $testimonialbg = $field['value']; ?>
 <?php the_field('happy_pet_rotator', 'option'); ?>
 	<?php while(have_rows('happy_pet', 'option')) : the_row(); ?>
 		<div class="carousel-cell">
-			<?php $testimonialImage = get_sub_field('image') ?>
-		
-				<h2 class="happyPet"><?php the_sub_field('pet_name') ?></h2>
-				<div class="happyPetBorder"><div class="happyPetBG" style="border:<?php echo $testimonialbg; ?> 0px solid"><div class="happyPetImage"><img src="<?php echo $testimonialImage['url'] ?> " alt="<?php echo $testimonialImage['alt'] ?> "></div></div></div>
+			<div class="rotatorInfo">
+				<?php $testimonialImage = get_sub_field('image') ?>
+			
+					<h2 class="happyPet"><?php the_sub_field('pet_name') ?></h2>
+					<div class="happyPetBorder"><div class="happyPetBG" style="border:<?php echo $testimonialbg; ?> 0px solid"><div class="happyPetImage"><img src="<?php echo $testimonialImage['url'] ?> " alt="<?php echo $testimonialImage['alt'] ?> "></div></div></div>
 				<div class="text"><p><?php the_sub_field('testimonial') ?></p></div>
-		
+			</div>
 		</div>
 	<?php endwhile; ?>
 	</div>
@@ -80,25 +60,7 @@ $testimonialbg = $field['value']; ?>
 $value = $field['value']; ?>
 
 <section class="newsletter" style="background:<?php echo $value; ?> ">
-	<div class="content">
-		<h2><?php  the_field('newsletter_headline', 'option')?></h2>
-		<p><?php the_field('newsletter_text', 'option') ?></p>
-		<!-- Begin MailChimp Signup Form -->
-		<div id="mc_embed_signup">
-		<form action="//ottawapetsitter.us11.list-manage.com/subscribe/post?u=3f2951fc709e0df4cc42a6270&amp;id=03946e3136" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-		    <div id="mc_embed_signup_scroll">
-			<input type="text" value="" name="FNAME" class="required" id="mce-FNAME" placeholder="Name">
-			<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
-			<div id="mce-responses" class="clear">
-				<div class="response" id="mce-error-response" style="display:none"></div>
-				<div class="response" id="mce-success-response" style="display:none"></div>
-			</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-		    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_3f2951fc709e0df4cc42a6270_03946e3136" tabindex="-1" value=""></div>
-		    <div class="clear"><input type="submit" value="<?php the_field('newsletter_button_text', 'option') ?> " name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-		    </div>
-		</form>
-		</div>
-	</div>
+<?php get_template_part('newsletter'); ?>
 </section>
 
 

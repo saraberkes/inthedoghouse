@@ -5,6 +5,7 @@ ul.menu {
 	background: $yellow;
 	text-align: center;
 	padding: 20px 0;
+	display: block;
 
 	li {
 		display: inline;
@@ -33,4 +34,8 @@ ul.menu {
 
 .current-menu-item {
 	border-bottom: 2px solid white;
+}
+
+#mobileMenu {
+	display: none
 }

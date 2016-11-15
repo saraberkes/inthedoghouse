@@ -151,13 +151,12 @@ h3#reply-title {
 #respond {
 
 	.required {
-		color: #ff4b33;
+		color: $orange;
 		font-weight: 700;
 	}
 	label {
 		color: $grey;
 		font-size: 0.8rem;
-		font-style: italic;
 	}
 	input {
 		width: 98%;
@@ -254,4 +253,38 @@ input[type=submit] {
 
 input[type=text], input[type=email], input[type=url]{
 	color: $grey;
+}
+
+.comment-form {
+	display: flex;
+	flex-direction: column;
+
+	input[type=text], input[type=email], input[type=url], textarea {
+		border: 2px solid $grey;
+		padding: 5px;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	p.comment-form-author {
+		order: 1;
+	}
+
+	p.comment-form-email {
+		order: 2;
+	}
+
+	p.comment-form-url {
+		order: 3;
+	}
+
+	p.comment-form-comment {
+		order: 4;
+	}
+
+	p.form-submit {
+		order: 5;
+	}
 }
