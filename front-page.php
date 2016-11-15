@@ -33,7 +33,7 @@ $introbg = $field['value']; ?>
 <?php $field = get_field_object('home_rotator_bg_colour');
 $testimonialbg = $field['value']; ?>
 
-<section class="testimonial" style="background:<?php echo $testimonialbg; ?>"><div class="carousel"  data-flickity='{"contain":true,"imagesLoaded":true,"freeScroll":true,"wrapAround": true,"pageDots":false,"lazyLoad":true, "autoPlay":7000, "pauseAutoPlayOnHover":false}'>
+<section class="testimonial" style="background:<?php echo $testimonialbg; ?>"><div class="carousel"  data-flickity='{"contain":true,"imagesLoaded":true,"freeScroll":false,"wrapAround": true,"pageDots":false,"lazyLoad":true, "autoPlay":7000, "pauseAutoPlayOnHover":false, "draggable":false}'>
 <?php the_field('happy_pet_rotator', 'option'); ?>
 	<?php while(have_rows('happy_pet', 'option')) : the_row(); ?>
 		<div class="carousel-cell">

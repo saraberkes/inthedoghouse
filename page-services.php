@@ -94,7 +94,7 @@
   $testimonialbg = $field['value']; ?>
 
   <section class="testimonial" style="background:<?php echo $testimonialbg; ?>">
-  <div class="carousel"  data-flickity='{"contain":true,"imagesLoaded":true,"freeScroll":true,"wrapAround": true, "pageDots":false,"lazyLoad":true, "autoPlay":7000, "pauseAutoPlayOnHover":false}'>
+  <div class="carousel"  data-flickity='{"contain":true,"imagesLoaded":true,"freeScroll":false,"wrapAround": true, "pageDots":false,"lazyLoad":true, "autoPlay":7000, "draggable":false, "pauseAutoPlayOnHover":false}'>
   <?php the_field('happy_pet_rotator', 'option'); ?>
     <?php while(have_rows('happy_pet', 'option')) : the_row(); ?>
       <div class="carousel-cell">
