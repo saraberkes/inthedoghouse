@@ -17,6 +17,7 @@ $(function(){
   		});
   	}
    
+   //this changes the text on the menu to close menu when necessary
    if($(this).html() === '<a href="#">Close Menu</a>') {
     $(this).html('<a href="#">Menu</a>');
   
@@ -26,24 +27,36 @@ $(function(){
 
   });
 
- //  function checkWidth() {
- //  var windowSize = $(window).width();
+//this checks the width of the browser so the regular menu doesn't fade
+  function checkWidth() {
+  var windowSize = $(window).width();
 
- //  if(windowSize <= 650) {
- //    $(window).scroll(function(){
-	//     	if($(window).scrollTop() > 300) {
-	//     		$('.showMenu').fadeOut(300, function(){
-	//   	  		$('.showMenu').toggleClass('menuRegular');
-	//     		});
+  if(windowSize <= 650) {
+    $(window).scroll(function(){
+	    	if($(window).scrollTop() > 300) {
+	    		$('.showMenu').fadeOut(300, function(){
+	  	  		$('.showMenu').toggleClass('menuRegular');
+
+				//this repeats what's above so the menu works after closing
+	  	  		if($('.menuRegular').hasClass('showMenu')) {
+	  	  			$('.menuRegular').fadeOut(100, function() {
+	  	  				$('.menuRegular').removeClass('showMenu');
+	  	  			});
+	  	  		} else {
+	  	  			$('.menuRegular').fadeIn(100, function(){
+	  	  				$('.menuRegular').addClass('showMenu');
+	  	  			});
+	  	  		}
+	    		});
 	  	  	
-	//   	  	$('#mobileMenu').html('<a href="#">Menu</a>');
-	//     	}
- //    	}
- //  	);
- //  }
- // }
+	  	  	$('#mobileMenu').html('<a href="#">Menu</a>');
+	    	}
+    	}
+  	);
+  }
+ }
 
- // checkWidth();
+ checkWidth();
 
   $('#menu-primary-menu li').on('click', function(){
     $('.menufixed').toggleClass('showMenu');
