@@ -1,7 +1,7 @@
 <?php get_header();  ?>
 
 <main>
-  <?php while(have_rows('pet_info')) : the_row(); ?>
+  <?php if(have_rows('pet_info')) while(have_rows('pet_info')) : the_row(); ?>
     <?php $happypetBG = get_sub_field('background_colour') ?>
     <?php $petImage = get_sub_field('image') ?>
     <div class="testimonial" style="background:<?php echo $happypetBG?>">

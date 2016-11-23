@@ -245,6 +245,7 @@ header {
 
 		img {
 			height: 100%;
+			width: 100%;
 			object-fit: cover;
 		}
 	}
@@ -421,7 +422,7 @@ header {
 			border-top: 45px solid;
 			border-top-color: inherit;
 			position: absolute;
-			bottom: -53%;
+			bottom: -95px;
 			left: 15%;
 		}
 
@@ -432,7 +433,7 @@ header {
 			border-right: 1px solid transparent;
 			border-top: 40px solid white;
 			position: absolute;
-			bottom: -38%;
+			bottom: -68px;
 			left: 15%;
 		}
 
@@ -1216,6 +1217,10 @@ article:first-child {
 	p {
 		text-align: center;
 	}
+}
+
+.simple_page {
+	padding: 50px 0;
 }
 
 @import 'queries';
